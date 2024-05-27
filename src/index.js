@@ -1,6 +1,6 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HeroBanner from "./components/HeroBanner";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import HeroBanner from "./components/heroBanner/HeroBanner";
 
 import Home from "./pages/Home";
 import Details from "./pages/Details";

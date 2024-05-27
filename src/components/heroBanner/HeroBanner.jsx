@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import { useSelector } from "react-redux";
-import Img from "../components/lazyLoadImage/Img";
-import ContentWrapper from "../components/contentWrapper/ContentWrapper";
+import Img from "../lazyLoadImage/Img";
+import ContentWrapper from "../contentWrapper/ContentWrapper";
+import "./style.scss";
 
 const HeroBanner = () => {
   const [background, setBackground] = useState("");
@@ -27,22 +28,23 @@ const HeroBanner = () => {
   const searchQueryHandler = (e) => {
     if (e.key === "Enter" && query.length > 0) {
       navigate(`/search/${query}`);
-      setBackground("https://image.tmdb.org/t/p/original/" + query);
+      // setBackground("https://image.tmdb.org/t/p/original/" + query);
     }
   };
 
   return (
     <div className="heroBanner">
       {!loading && (
-        <div className="backdrop-img">
-          <Img src={background} />
+        <div className="backdrop-img-wrapper">
+          <Img src={background} className="backdrop-img" />
         </div>
       )}
 
       <div className="opacity-layer"></div>
+
       <ContentWrapper>
         <div className="heroBannerContent">
-          <span className="title">Welcome</span>
+          <span className="title">Welcome.</span>
           <span className="subTitle">
             Million of Movies, TV shows and people to discover. Explore Now.
           </span>
@@ -50,7 +52,7 @@ const HeroBanner = () => {
             <input
               type="text"
               value={query}
-              placeholder="Search for a movie or a tv show..."
+              placeholder="Search for a Movie or a TV show..."
               onChange={searchInputHandler}
               onKeyUp={searchQueryHandler}
             />
