@@ -22,8 +22,6 @@ const App = () => {
   useEffect(() => {
     const fetchApiConfig = () => {
       fetchDataFromApi("/configuration").then((res) => {
-        console.log(res);
-
         const url = {
           backdrop: res.images.secure_base_url + "original",
           poster: res.images.secure_base_url + "original",
@@ -34,6 +32,23 @@ const App = () => {
       });
     };
     fetchApiConfig();
+
+    const genresCall = async () => {
+      let promises = [];
+      let endPoints = ["tv", "movie"];
+      let allGenres = {};
+
+      endPoints.forEach((endpoint) => {
+        promises.push(fetchDataFromApi(`/genre/${endpoint}/list`));
+      });
+
+      const data = await Promise.all(promises);
+      data.map(({ genres }) => {
+        genres.map((item) => (allGenres[item.id] = item));
+      });
+      dispatch(getGenres(allGenres));
+    };
+    genresCall();
   }, []);
 
   return (
