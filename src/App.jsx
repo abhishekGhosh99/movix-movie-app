@@ -52,10 +52,10 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/movix-movie-app">
       <Header />
       <Routes>
-        <Route path="/movix-movie-app" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/search/:query" element={<SearchResult />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
