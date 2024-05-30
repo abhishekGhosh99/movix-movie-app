@@ -79,7 +79,7 @@ const Header = () => {
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
       <ContentWrapper>
         <div className="logo">
-          <Link to="/movix-movie-app/">
+          <Link to="/">
             <img src={logo} alt="logo" />
           </Link>
         </div>
