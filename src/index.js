@@ -7,6 +7,8 @@ import CircleRating from "./components/circleRating/CircleRating";
 import Genres from "./components/genres/Genres";
 import Img from "./components/lazyLoadImage/Img";
 import VideoPopUp from "./components/videoPopUp/VideoPopUp";
+import Spinner from "./components/spinner/Spinner";
+import MovieCard from "./components/movieCard/MovieCard";
 
 import Home from "./pages//home/Home";
 import HeroBanner from "./pages/home/heroBanner/HeroBanner";
@@ -47,4 +49,6 @@ export {
   VideosSection,
   SimilarMovies,
   Recommendation,
+  Spinner,
+  MovieCard,
 };
