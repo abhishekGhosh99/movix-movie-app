@@ -5,6 +5,8 @@ import SwitchTabs from "./components/switchTabs/SwitchTabs";
 import Carousel from "./components/carousel/Carousel";
 import CircleRating from "./components/circleRating/CircleRating";
 import Genres from "./components/genres/Genres";
+import Img from "./components/lazyLoadImage/Img";
+import VideoPopUp from "./components/videoPopUp/VideoPopUp";
 
 import Home from "./pages//home/Home";
 import HeroBanner from "./pages/home/heroBanner/HeroBanner";
@@ -15,6 +17,11 @@ import PageNotFound from "./pages/404/PageNotFound";
 import SearchResult from "./pages/searchResult/SearchResult";
 import Popular from "./pages/home/popular/Popular";
 import TopRated from "./pages/home/topRated/TopRated";
+import DetailsBanner from "./pages/details/detailsBanner/DetailsBanner";
+import Cast from "./pages/details/cast/Cast";
+import VideosSection from "./pages/details/videosSection/VideosSection";
+import SimilarMovies from "./pages/details/carousels/SimilarMovies";
+import Recommendation from "./pages/details/carousels/Recommendation";
 
 export {
   Header,
@@ -33,4 +40,11 @@ export {
   Genres,
   Popular,
   TopRated,
+  Img,
+  DetailsBanner,
+  VideoPopUp,
+  Cast,
+  VideosSection,
+  SimilarMovies,
+  Recommendation,
 };
