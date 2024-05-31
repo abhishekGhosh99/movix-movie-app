@@ -30,7 +30,6 @@ const HeroBanner = () => {
   const searchQueryHandler = (e) => {
     if (e.key === "Enter" && query.length > 0) {
       navigate(`/search/${query}`);
-      // setBackground("https://image.tmdb.org/t/p/original/" + query);
     }
   };
 
@@ -58,7 +57,13 @@ const HeroBanner = () => {
               onChange={searchInputHandler}
               onKeyUp={searchQueryHandler}
             />
-            <button>Search</button>
+            <button
+              onClick={() => {
+                navigate(`/search/${query}`);
+              }}
+            >
+              Search
+            </button>
           </div>
         </div>
       </ContentWrapper>
