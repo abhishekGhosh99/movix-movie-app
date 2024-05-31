@@ -51,9 +51,8 @@
       margin-bottom: 10px;
       background: var(--gradient-text);
       color: transparent;
-      -webkit-background-clip: text;
+      background-clip: text;
       @include md {
-        margin-bottom: 10px;
         font-size: 90px;
       }
     }
