@@ -8,6 +8,7 @@ const CircleRating = ({ rating }) => {
   return (
     <div className="circleRating">
       <CircularProgressbar
+        dominant-baseline="middle"
         value={rating}
         maxValue={10}
         text={rating}
